@@ -61,14 +61,6 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
         <div className="relative container mx-auto text-center px-6 py-20">
-          {/* LOGO GRANDE - sobre fondo claro para máxima visibilidad */}
-          <div className="inline-block bg-white rounded-3xl px-10 py-8 mb-8 ring-4 ring-primary shadow-fire">
-            <img
-              src={logoNuevo}
-              alt="Parrilla del Sabor · Todo al carbón"
-              className="h-40 md:h-56 w-auto mx-auto"
-            />
-          </div>
           <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/40 text-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
             <Flame className="w-4 h-4" /> Todo al carbón · Barranquilla
           </div>
