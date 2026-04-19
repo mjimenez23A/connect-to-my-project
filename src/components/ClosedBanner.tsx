@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo-light.png";
 
 const STORAGE_KEY = "closed-banner-dismissed-date";
 
@@ -35,9 +35,11 @@ export const ClosedBanner = () => {
         <X className="w-6 h-6" />
       </button>
       <div className="max-w-2xl w-full text-center space-y-8">
-        <div className="mx-auto inline-block bg-white rounded-2xl p-5 ring-4 ring-primary shadow-fire">
-          <img src={logo} alt="Parrilla del Sabor" className="w-48 md:w-64 h-auto" />
-        </div>
+        <img
+          src={logo}
+          alt="Parrilla del Sabor"
+          className="mx-auto w-72 md:w-[28rem] h-auto drop-shadow-[0_0_20px_hsl(0_85%_50%/0.6)]"
+        />
         <h2 className="font-display text-4xl md:text-6xl text-primary leading-tight">
           ¡Lo sentimos!
         </h2>

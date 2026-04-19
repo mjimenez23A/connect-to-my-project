@@ -1,5 +1,5 @@
 import { Flame, MapPin, Phone, Clock, Instagram, ExternalLink, MessageCircle } from "lucide-react";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo-light.png";
 import menuImg from "@/assets/menu.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 import cocteles from "@/assets/cocteles.jpg";
@@ -27,10 +27,12 @@ const Index = () => {
       {/* NAV */}
       <header className="fixed top-0 inset-x-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container mx-auto flex items-center justify-between py-3">
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="bg-white rounded-xl p-1.5 ring-2 ring-primary shadow-fire group-hover:scale-105 transition-transform">
-              <img src={logo} alt="Parrilla del Sabor" className="h-12 md:h-16 w-auto" />
-            </div>
+          <a href="#" className="flex items-center group">
+            <img
+              src={logo}
+              alt="Parrilla del Sabor"
+              className="h-16 md:h-20 w-auto drop-shadow-[0_0_12px_hsl(0_85%_50%/0.6)] group-hover:scale-105 transition-transform"
+            />
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wider">
             <a href="#nuevos" className="hover:text-primary transition">Nuevos</a>
@@ -252,9 +254,11 @@ const Index = () => {
       {/* FOOTER */}
       <footer className="border-t border-border py-10">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="bg-white rounded-xl p-2 ring-2 ring-primary shadow-fire">
-            <img src={logo} alt="Parrilla del Sabor" className="h-14 w-auto" />
-          </div>
+          <img
+            src={logo}
+            alt="Parrilla del Sabor"
+            className="h-20 w-auto drop-shadow-[0_0_12px_hsl(0_85%_50%/0.5)]"
+          />
           <p className="text-sm text-muted-foreground text-center">
             © {new Date().getFullYear()} Parrilla del Sabor · Todo al carbón · Barranquilla
           </p>
