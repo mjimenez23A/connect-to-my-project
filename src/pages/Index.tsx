@@ -1,5 +1,6 @@
 import { Flame, MapPin, Phone, Clock, Instagram, ExternalLink, MessageCircle } from "lucide-react";
-import logo from "@/assets/logo-light.png";
+import logoLight from "@/assets/logo-light.png";
+import logoNuevo from "@/assets/logo-nuevo.png";
 import menuImg from "@/assets/menu.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 import cocteles from "@/assets/cocteles.jpg";
@@ -8,15 +9,15 @@ import { ClosedBanner } from "@/components/ClosedBanner";
 const WHATSAPP = "https://wa.me/573225223702";
 
 const nuevosPlatos = [
-  { name: "La Victoria", desc: "Hamburguesa al carbón · Pan artesanal 100gr · Carne 182gr · Queso Cheddar · Tocineta", price: "$28.000" },
-  { name: "La Parrillera", desc: "Pan artesanal 100gr · Carne 182gr · Cebolla caramelizada · Tocineta · Salami · Mozzarella · Salsa de la casa", price: "$30.000" },
+  { name: "El Tranca", desc: "Pan pretzel 1 metro · Costillitas · Suiza · Chorizo · Pollo · Salchicha (7 personas)", price: "$130.000" },
+  { name: "La Bestia", desc: "Pan pretzel 70cm · Costillitas · Suiza · Chorizo · Pollo · Salchicha (5 personas)", price: "$90.000" },
 ];
 
 const masPedidos = [
-  { name: "El Carmen", desc: "Pollo · Cerdo · Tocineta · Mozzarella · Maíz · Queso Cheddar", price: "$22.000" },
-  { name: "El Tranca", desc: "Pan pretzel 1 metro · Costillitas · Suiza · Chorizo · Pollo · Salchicha (7 personas)", price: "$130.000" },
-  { name: "La Bestia", desc: "Pan pretzel 70cm · Costillitas · Suiza · Chorizo · Pollo · Salchicha (5 personas)", price: "$90.000" },
+  { name: "La Victoria", desc: "Hamburguesa al carbón · Pan artesanal 100gr · Carne 182gr · Queso Cheddar · Tocineta", price: "$28.000" },
+  { name: "La Parrillera", desc: "Pan artesanal 100gr · Carne 182gr · Cebolla caramelizada · Tocineta · Salami · Mozzarella · Salsa de la casa", price: "$30.000" },
   { name: "Salchipapa 4 Carnes", desc: "Pechuga · Chorizo Especial · Suiza · Salchicha · Papas a la francesa · Lechuga · Queso costeño", price: "$38.000" },
+  { name: "La Bestia", desc: "Pan pretzel 70cm · Costillitas · Suiza · Chorizo · Pollo · Salchicha (5 personas)", price: "$90.000" },
 ];
 
 const Index = () => {
@@ -29,16 +30,16 @@ const Index = () => {
         <div className="container mx-auto flex items-center justify-between py-3">
           <a href="#" className="flex items-center group">
             <img
-              src={logo}
+              src={logoLight}
               alt="Parrilla del Sabor"
-              className="h-16 md:h-20 w-auto drop-shadow-[0_0_12px_hsl(0_85%_50%/0.6)] group-hover:scale-105 transition-transform"
+              className="h-14 md:h-16 w-auto drop-shadow-[0_0_12px_hsl(0_85%_50%/0.6)] group-hover:scale-105 transition-transform"
             />
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wider">
             <a href="#nuevos" className="hover:text-primary transition">Nuevos</a>
             <a href="#pedidos" className="hover:text-primary transition">Más pedidos</a>
-            <a href="#nosotros" className="hover:text-primary transition">Nosotros</a>
             <a href="#menu" className="hover:text-primary transition">Menú</a>
+            <a href="#nosotros" className="hover:text-primary transition">Nosotros</a>
             <a href="#promos" className="hover:text-primary transition">Promos</a>
           </nav>
           <a
@@ -60,6 +61,14 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
         <div className="relative container mx-auto text-center px-6 py-20">
+          {/* LOGO GRANDE - sobre fondo gris para distinguirse */}
+          <div className="inline-block bg-secondary/90 backdrop-blur-sm rounded-3xl px-8 py-6 mb-8 ring-2 ring-primary/40 shadow-fire">
+            <img
+              src={logoNuevo}
+              alt="Parrilla del Sabor · Todo al carbón"
+              className="h-32 md:h-48 w-auto mx-auto"
+            />
+          </div>
           <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/40 text-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
             <Flame className="w-4 h-4" /> Todo al carbón · Barranquilla
           </div>
@@ -93,7 +102,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* NUEVOS PLATOS - texto dinámico, sin fotos */}
+      {/* NUEVOS PLATOS */}
       <section id="nuevos" className="py-24 bg-ember">
         <div className="container mx-auto px-6">
           <div className="text-center mb-14">
@@ -134,7 +143,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* MÁS PEDIDOS - cuadrículas sin foto */}
+      {/* MÁS PEDIDOS */}
       <section id="pedidos" className="py-24">
         <div className="container mx-auto px-6">
           <div className="text-center mb-14">
@@ -157,28 +166,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* SOBRE NOSOTROS */}
-      <section id="nosotros" className="py-24 bg-ember">
-        <div className="container mx-auto px-6 max-w-4xl text-center">
-          <span className="text-primary font-bold uppercase tracking-[0.3em] text-sm">Todo al carbón</span>
-          <h2 className="font-display text-5xl md:text-7xl mt-3 mb-8">Sobre Nosotros</h2>
-          <p className="text-lg md:text-xl text-foreground/85 leading-relaxed mb-6">
-            En <strong className="text-primary">Parrilla del Sabor</strong> creemos que el verdadero sabor nace del fuego.
-            Cada plato pasa por nuestro carbón ardiente, regalándole ese aroma ahumado, esa corteza dorada y ese sabor inconfundible que solo la brasa puede dar.
-          </p>
-          <p className="text-lg md:text-xl text-foreground/85 leading-relaxed mb-6">
-            Somos orgullosamente barranquilleros, hechos para los que disfrutan en grande.
-            Tenemos <strong className="text-primary">el perro más grande de Barranquilla… y no es tu marido.</strong> Hasta 1 metro de pan pretzel, costillitas, pollo, chorizo y mucho más, todo al carbón.
-          </p>
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-            Hamburguesas, salchipapas, chuzos, asados, perros supremos: todo cocinado lentamente sobre brasa para que cada bocado sea una experiencia.
-            Esto no es comida rápida cualquiera — es <strong className="text-foreground">tradición costeña al carbón</strong>.
-          </p>
-        </div>
-      </section>
-
-      {/* MENÚ EN IMAGEN */}
-      <section id="menu" className="py-24">
+      {/* MENÚ EN IMAGEN (ahora antes de Sobre Nosotros) */}
+      <section id="menu" className="py-24 bg-ember">
         <div className="container mx-auto px-6 text-center">
           <span className="text-primary font-bold uppercase tracking-[0.3em] text-sm">La carta completa</span>
           <h2 className="font-display text-5xl md:text-7xl mt-3 mb-8">Nuestro Menú</h2>
@@ -198,6 +187,26 @@ const Index = () => {
         </div>
       </section>
 
+      {/* SOBRE NOSOTROS (ahora debajo del menú) */}
+      <section id="nosotros" className="py-24">
+        <div className="container mx-auto px-6 max-w-4xl text-center">
+          <span className="text-primary font-bold uppercase tracking-[0.3em] text-sm">Todo al carbón</span>
+          <h2 className="font-display text-5xl md:text-7xl mt-3 mb-8">Sobre Nosotros</h2>
+          <p className="text-lg md:text-xl text-foreground/85 leading-relaxed mb-6">
+            En <strong className="text-primary">Parrilla del Sabor</strong> creemos que el verdadero sabor nace del fuego.
+            Cada plato pasa por nuestro carbón ardiente, regalándole ese aroma ahumado, esa corteza dorada y ese sabor inconfundible que solo la brasa puede dar.
+          </p>
+          <p className="text-lg md:text-xl text-foreground/85 leading-relaxed mb-6">
+            Somos orgullosamente barranquilleros, hechos para los que disfrutan en grande.
+            Tenemos <strong className="text-primary">el perro más grande de Barranquilla… y no es tu marido.</strong> Hasta 1 metro de pan pretzel, costillitas, pollo, chorizo y mucho más, todo al carbón.
+          </p>
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+            Hamburguesas, salchipapas, chuzos, asados, perros supremos: todo cocinado lentamente sobre brasa para que cada bocado sea una experiencia.
+            Esto no es comida rápida cualquiera — es <strong className="text-foreground">tradición costeña al carbón</strong>.
+          </p>
+        </div>
+      </section>
+
       {/* PROMOCIONES */}
       <section id="promos" className="py-24 bg-ember">
         <div className="container mx-auto px-6">
@@ -206,7 +215,7 @@ const Index = () => {
             <h2 className="font-display text-5xl md:text-7xl mt-3">Para Compartir</h2>
           </div>
           <div className="max-w-4xl mx-auto bg-card border border-border rounded-2xl overflow-hidden grid md:grid-cols-2 shadow-fire">
-            <img src={cocteles} alt="Cócteles 2x1" className="w-full h-full object-cover min-h-[280px]" loading="lazy" width={1024} height={768} />
+            <img src={cocteles} alt="Cócteles 2x1" className="w-full h-full object-cover min-h-[280px]" loading="lazy" />
             <div className="p-8 md:p-10 flex flex-col justify-center">
               <span className="bg-primary text-primary-foreground text-xs font-bold uppercase px-2 py-1 rounded self-start mb-4">Promo activa</span>
               <h3 className="font-display text-4xl md:text-5xl mb-3">2x1 en Cócteles</h3>
@@ -255,7 +264,7 @@ const Index = () => {
       <footer className="border-t border-border py-10">
         <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <img
-            src={logo}
+            src={logoLight}
             alt="Parrilla del Sabor"
             className="h-20 w-auto drop-shadow-[0_0_12px_hsl(0_85%_50%/0.5)]"
           />
