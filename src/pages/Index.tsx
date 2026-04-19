@@ -1,6 +1,6 @@
 import { Flame, MapPin, Phone, Clock, Instagram, ExternalLink, MessageCircle } from "lucide-react";
-import logoLight from "@/assets/logo-light.png";
 import logoNuevo from "@/assets/logo-nuevo.png";
+const logoLight = logoNuevo;
 import menuImg from "@/assets/menu.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 import cocteles from "@/assets/cocteles.jpg";
@@ -61,12 +61,12 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
         <div className="relative container mx-auto text-center px-6 py-20">
-          {/* LOGO GRANDE - sobre fondo gris para distinguirse */}
-          <div className="inline-block bg-secondary/90 backdrop-blur-sm rounded-3xl px-8 py-6 mb-8 ring-2 ring-primary/40 shadow-fire">
+          {/* LOGO GRANDE - sobre fondo claro para máxima visibilidad */}
+          <div className="inline-block bg-white rounded-3xl px-10 py-8 mb-8 ring-4 ring-primary shadow-fire">
             <img
               src={logoNuevo}
               alt="Parrilla del Sabor · Todo al carbón"
-              className="h-32 md:h-48 w-auto mx-auto"
+              className="h-40 md:h-56 w-auto mx-auto"
             />
           </div>
           <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/40 text-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
@@ -214,8 +214,10 @@ const Index = () => {
             <span className="text-primary font-bold uppercase tracking-[0.3em] text-sm">Promociones</span>
             <h2 className="font-display text-5xl md:text-7xl mt-3">Para Compartir</h2>
           </div>
-          <div className="max-w-4xl mx-auto bg-card border border-border rounded-2xl overflow-hidden grid md:grid-cols-2 shadow-fire">
-            <img src={cocteles} alt="Cócteles 2x1" className="w-full h-full object-cover min-h-[280px]" loading="lazy" />
+          <div className="max-w-3xl mx-auto bg-card border border-border rounded-2xl overflow-hidden grid md:grid-cols-2 shadow-fire items-center">
+            <div className="p-6 flex items-center justify-center">
+              <img src={cocteles} alt="Cócteles 2x1" className="w-full max-w-[260px] h-auto rounded-xl object-cover" loading="lazy" />
+            </div>
             <div className="p-8 md:p-10 flex flex-col justify-center">
               <span className="bg-primary text-primary-foreground text-xs font-bold uppercase px-2 py-1 rounded self-start mb-4">Promo activa</span>
               <h3 className="font-display text-4xl md:text-5xl mb-3">2x1 en Cócteles</h3>
