@@ -60,14 +60,14 @@ const Index = () => {
           style={{ backgroundImage: `url(${heroBg})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
-        <div className="relative container mx-auto text-center px-6 py-20">
+        <div className="relative container mx-auto text-center px-6 py-10">
 
   {/* LOGO */}
   <div className="flex justify-center mb-6">
     <img
       src={logoNuevo}
       alt="Parrilla del Sabor · Todo al carbón"
-      className="h-40 md:h-56 w-auto"
+      className="w-[240px] h-[240px]"
     />
   </div>
 
@@ -81,11 +81,7 @@ const Index = () => {
     EN QUILLA
   </h1>
 
-  <p className="text-lg md:text-2xl text-foreground/80 max-w-2xl mx-auto mb-2">
-    …y no es tu marido. 🔥
-  </p>
-
-  <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-10">
+  <p className="text-sm md:text-base text-muted-foreground max-w-xl mx-auto mb-4">
     Sabor ahumado, porciones épicas. Hechos con fuego, carbón y mucho corazón costeño.
   </p>
 
@@ -93,11 +89,11 @@ const Index = () => {
       </section>
 
       {/* NUEVOS PLATOS */}
-      <section id="nuevos" className="py-24 bg-ember">
+      <section id="nuevos" className="py-10 bg-ember">
         <div className="container mx-auto px-6">
           <div className="text-center mb-14">
             <span className="text-primary font-bold uppercase tracking-[0.3em] text-sm">Recién salidos del carbón</span>
-            <h2 className="font-display text-5xl md:text-7xl mt-3">Nuestros Nuevos Platos</h2>
+            <h2 className="font-display text-5xl md:text-7xl mt-3">Lo nuevo de la PARRILLA</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {nuevosPlatos.map((p, i) => (
@@ -134,7 +130,7 @@ const Index = () => {
       </section>
 
       {/* MÁS PEDIDOS */}
-      <section id="pedidos" className="py-24">
+      <section id="pedidos" className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-14">
             <span className="text-primary font-bold uppercase tracking-[0.3em] text-sm">Los favoritos de la casa</span>
@@ -144,10 +140,12 @@ const Index = () => {
             {masPedidos.map((p) => (
               <article
                 key={p.name}
-                className="group bg-secondary/40 border border-border rounded-xl p-6 hover:bg-secondary hover:border-primary transition-all duration-300 flex flex-col"
+                className="group flex bg-secondary/40 border border-border rounded-xl p-6 hover:bg-secondary hover:border-primary transition-all duration-300 flex flex-col"
               >
-                <Flame className="w-6 h-6 text-primary mb-4" />
-                <h3 className="font-display text-2xl mb-2 group-hover:text-primary transition">{p.name}</h3>
+                <div className="flex items-center justify-between">
+                  <h3 className="font-display text-2xl mb-2 group-hover:text-primary transition">{p.name}</h3>
+                  <Flame className="w-6 h-6 text-primary mb-4 mt-2 ml-4"/>
+                </div>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">{p.desc}</p>
                 <div className="font-display text-2xl text-primary">{p.price}</div>
               </article>
@@ -157,7 +155,7 @@ const Index = () => {
       </section>
 
       {/* MENÚ EN IMAGEN (ahora antes de Sobre Nosotros) */}
-      <section id="menu" className="py-24 bg-ember">
+      <section id="menu" className="py-10 bg-ember">
         <div className="container mx-auto px-6 text-center">
           <span className="text-primary font-bold uppercase tracking-[0.3em] text-sm">La carta completa</span>
           <h2 className="font-display text-5xl md:text-7xl mt-3 mb-8">Nuestro Menú</h2>
@@ -178,7 +176,7 @@ const Index = () => {
       </section>
 
       {/* SOBRE NOSOTROS (ahora debajo del menú) */}
-      <section id="nosotros" className="py-24">
+      <section id="nosotros" className="py-20">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <span className="text-primary font-bold uppercase tracking-[0.3em] text-sm">Todo al carbón</span>
           <h2 className="font-display text-5xl md:text-7xl mt-3 mb-8">Sobre Nosotros</h2>
@@ -188,7 +186,7 @@ const Index = () => {
           </p>
           <p className="text-lg md:text-xl text-foreground/85 leading-relaxed mb-6">
             Somos orgullosamente barranquilleros, hechos para los que disfrutan en grande.
-            Tenemos <strong className="text-primary">el perro más grande de Barranquilla… y no es tu marido.</strong> Hasta 1 metro de pan pretzel, costillitas, pollo, chorizo y mucho más, todo al carbón.
+            Tenemos <strong className="text-primary">el perro más grande de Barranquilla</strong> Hasta 1 metro de pan pretzel, costillitas, pollo, chorizo y mucho más, todo al carbón.
           </p>
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
             Hamburguesas, salchipapas, chuzos, asados, perros supremos: todo cocinado lentamente sobre brasa para que cada bocado sea una experiencia.
