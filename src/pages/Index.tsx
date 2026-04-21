@@ -62,11 +62,11 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
         <div className="relative container mx-auto text-center px-6 pt-16 pb-10">
   {/* LOGO */}
-  <div className="flex justify-center">
+  <div className="flex justify-center mt-[10%]">
     <img
       src={logoNuevo}
       alt="Parrilla del Sabor · Todo al carbón"
-      className=""
+      className="!max-w-[80%]"
     />
   </div>
 
@@ -157,7 +157,19 @@ const Index = () => {
       <section id="menu" className="py-10 bg-ember">
         <div className="container mx-auto px-6 text-center">
           <span className="text-primary font-bold uppercase tracking-[0.3em] text-sm">La carta completa</span>
-          <h2 className="font-display text-5xl md:text-7xl mt-3 mb-8">Nuestro Menú</h2>
+          <h2 className="font-display mt-3 mb-8 leading-none">
+            <span className="block text-4xl md:text-5xl">
+              ¿YA SABES
+            </span>
+
+            <span className="block text-7xl md:text-9xl font-black text-primary">
+              QUE
+            </span>
+
+            <span className="block text-6xl md:text-8xl tracking-tight">
+              PEDIR?
+            </span>
+          </h2>
           <a
             href={menuImg}
             target="_blank"
