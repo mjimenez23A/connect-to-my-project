@@ -10,7 +10,7 @@ export const ClosedBanner = () => {
   useEffect(() => {
     // Tuesday in local time = 2
     const today = new Date();
-    const isTuesday = today.getDay() === 0;
+    const isTuesday = today.getDay() === 1;
     if (!isTuesday) return;
 
     const todayKey = today.toDateString();
