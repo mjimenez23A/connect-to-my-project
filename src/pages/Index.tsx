@@ -88,7 +88,7 @@ const Index = () => {
       </section>
 
       {/* NUEVOS PLATOS */}
-      <section id="nuevos" className="py-20 bg-ember">
+      <section id="nuevos" className="py-10 bg-ember">
         <div className="container mx-auto px-6">
           <div className="text-center mb-14">
             <span className="text-primary font-bold uppercase tracking-[0.3em] text-sm">Recién salidos del carbón</span>
