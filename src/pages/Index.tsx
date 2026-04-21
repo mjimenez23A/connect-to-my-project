@@ -1,5 +1,5 @@
 import { Flame, MapPin, Phone, Clock, Instagram, ExternalLink, MessageCircle } from "lucide-react";
-import logoNuevo from "@/assets/logo-nuevo.png";
+import logoNuevo from "@/assets/logo1.png";
 const logoLight = logoNuevo;
 import menuImg from "@/assets/menu.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -61,37 +61,35 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
         <div className="relative container mx-auto text-center px-6 py-20">
-          <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/40 text-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
-            <Flame className="w-4 h-4" /> Todo al carbón · Barranquilla
-          </div>
-          <h1 className="font-display text-6xl md:text-9xl leading-none mb-6">
-            EL PERRO MÁS <span className="text-gradient-fire">GRANDE</span>
-            <br />
-            DE BARRANQUILLA
-          </h1>
-          <p className="text-lg md:text-2xl text-foreground/80 max-w-2xl mx-auto mb-2">
-            …y no es tu marido. 🔥
-          </p>
-          <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-10">
-            Sabor ahumado, porciones épicas. Hechos con fuego, carbón y mucho corazón costeño.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href={WHATSAPP}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-8 py-4 rounded-full flex items-center gap-2 transition shadow-fire text-lg"
-            >
-              <MessageCircle className="w-5 h-5" /> Pedir por WhatsApp
-            </a>
-            <a
-              href="#menu"
-              className="border border-foreground/30 hover:border-primary hover:text-primary text-foreground font-bold px-8 py-4 rounded-full transition text-lg"
-            >
-              Ver carta
-            </a>
-          </div>
-        </div>
+
+  {/* LOGO */}
+  <div className="flex justify-center mb-6">
+    <img
+      src={logoNuevo}
+      alt="Parrilla del Sabor · Todo al carbón"
+      className="h-40 md:h-56 w-auto"
+    />
+  </div>
+
+  <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/40 text-primary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+    <Flame className="w-4 h-4" /> Todo al carbón · Barranquilla
+  </div>
+
+  <h1 className="font-display text-6xl md:text-9xl leading-none mb-6">
+    EL PERRO MÁS <span className="text-gradient-fire">GRANDE</span>
+    <br />
+    EN QUILLA
+  </h1>
+
+  <p className="text-lg md:text-2xl text-foreground/80 max-w-2xl mx-auto mb-2">
+    …y no es tu marido. 🔥
+  </p>
+
+  <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-10">
+    Sabor ahumado, porciones épicas. Hechos con fuego, carbón y mucho corazón costeño.
+  </p>
+
+</div>
       </section>
 
       {/* NUEVOS PLATOS */}

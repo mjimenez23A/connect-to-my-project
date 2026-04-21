@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
-import logo from "@/assets/logo-light.png";
+import logo from "@/assets/logo1.png";
 
 const STORAGE_KEY = "closed-banner-dismissed-date";
 
