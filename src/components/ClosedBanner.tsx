@@ -8,13 +8,14 @@ export const ClosedBanner = () => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    // Tuesday in local time = 2
     const today = new Date();
-    const isTuesday = today.getDay() === 1;
+    const isTuesday = today.getDay() === 2;
+
     if (!isTuesday) return;
 
     const todayKey = today.toDateString();
     const dismissed = localStorage.getItem(STORAGE_KEY);
+
     if (dismissed !== todayKey) setOpen(true);
   }, []);
 
@@ -34,23 +35,39 @@ export const ClosedBanner = () => {
       >
         <X className="w-6 h-6" />
       </button>
-      <div className="max-w-2xl w-full text-center space-y-8">
+
+      <div className="max-w-3xl w-full text-center space-y-8">
         <img
           src={logo}
           alt="Parrilla del Sabor"
-          className="mx-auto w-72 md:w-[28rem] h-auto drop-shadow-[0_0_20px_hsl(0_85%_50%/0.6)]"
+          className="mx-auto w-72 md:w-[30rem] h-auto drop-shadow-[0_0_20px_hsl(0_85%_50%/0.6)]"
         />
-        <h2 className="font-display text-4xl md:text-6xl text-primary leading-tight">
-          ¡Lo sentimos!
-        </h2>
-        <p className="text-lg md:text-2xl text-foreground/90 leading-relaxed">
-          Estamos preparando la mejor carne para ustedes.
-          <br />
-          Los esperamos nuevamente <span className="text-primary font-bold">mañana</span>.
-        </p>
+
+        <div className="space-y-3">
+          <p className="text-sm md:text-base uppercase tracking-[0.4em] text-foreground/60">
+            Hoy estamos cerrados
+          </p>
+
+          <h2 className="font-display text-5xl md:text-7xl text-primary leading-none">
+            Preparando
+          </h2>
+
+          <h3 className="font-display text-3xl md:text-5xl text-white leading-tight">
+            cortes irresistibles
+          </h3>
+
+          <p className="text-xl md:text-3xl font-semibold text-primary/90">
+            al carbón
+          </p>
+
+          <p className="text-base md:text-xl text-foreground/80 pt-3">
+            Nos vemos mañana 🔥
+          </p>
+        </div>
+
         <button
           onClick={close}
-          className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-8 py-3 rounded-full transition shadow-fire"
+          className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold px-8 py-3 rounded-full transition shadow-fire text-lg"
         >
           Entendido
         </button>
